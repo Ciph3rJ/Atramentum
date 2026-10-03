@@ -1,0 +1,6 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "atramentum:block/dried_glow_ink"
+  }
+}

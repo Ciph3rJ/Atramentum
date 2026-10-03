@@ -1,0 +1,21 @@
+{
+  "values": [
+    "atramentum:ink",
+    "atramentum:glow_ink",
+    "atramentum:white_ink",
+    "atramentum:light_gray_ink",
+    "atramentum:gray_ink",
+    "atramentum:brown_ink",
+    "atramentum:red_ink",
+    "atramentum:orange_ink",
+    "atramentum:yellow_ink",
+    "atramentum:lime_ink",
+    "atramentum:green_ink",
+    "atramentum:cyan_ink",
+    "atramentum:light_blue_ink",
+    "atramentum:blue_ink",
+    "atramentum:purple_ink",
+    "atramentum:magenta_ink",
+    "atramentum:pink_ink"
+  ]
+}

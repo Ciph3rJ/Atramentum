@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:gray_dye",
+    "atramentum:ink_bucket"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atramentum:gray_ink_bucket"
+  }
+}

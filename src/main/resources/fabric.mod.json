@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "atramentum",
+	"version": "${version}",
+	"name": "Atramentum",
+	"description": "",
+	"authors": [
+		"Ciph3rJ"
+	],
+	"license": "",
+	"icon": "assets/atramentum/icon.png",
+	"environment": "*",
+	"accessWidener": "atramentum.accesswidener",
+	"entrypoints": {
+		"main": [
+			"io.github.ciph3rj.atramentum.Atramentum"
+		],
+		"client": [
+			"io.github.ciph3rj.atramentum.client.AtramentumClient"
+		],
+		"fabric-datagen": [
+			"io.github.ciph3rj.atramentum.data.AtramentumDataGenerator"
+		]
+	},
+	"mixins": [
+		"atramentum.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

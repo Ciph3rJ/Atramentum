@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:magenta_dye",
+    "atramentum:ink_bucket"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atramentum:magenta_ink_bucket"
+  }
+}

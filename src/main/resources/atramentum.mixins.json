@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "io.github.ciph3rj.atramentum.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EntityMixin",
+    "ExampleMixin",
+    "GuiMixin",
+    "LivingEntityMixin",
+    "SquidMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

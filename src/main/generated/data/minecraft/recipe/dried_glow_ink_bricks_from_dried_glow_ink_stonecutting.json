@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "atramentum:dried_glow_ink",
+  "result": {
+    "count": 1,
+    "id": "atramentum:dried_glow_ink_bricks"
+  }
+}

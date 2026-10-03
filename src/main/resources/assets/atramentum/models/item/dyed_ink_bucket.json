@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "atramentum:item/dyed_ink_bucket_liquid",
+    "layer1": "atramentum:item/dyed_ink_bucket"
+  }
+}

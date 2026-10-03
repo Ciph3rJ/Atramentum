@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "atramentum:block/dried_glow_ink",
+    "side": "atramentum:block/dried_glow_ink",
+    "top": "atramentum:block/dried_glow_ink"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "atramentum:item/glow_ink_bucket"
+  }
+}

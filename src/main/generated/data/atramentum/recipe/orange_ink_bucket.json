@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:orange_dye",
+    "atramentum:ink_bucket"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atramentum:orange_ink_bucket"
+  }
+}

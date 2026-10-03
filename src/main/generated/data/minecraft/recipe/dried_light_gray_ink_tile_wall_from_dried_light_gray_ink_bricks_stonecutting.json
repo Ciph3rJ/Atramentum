@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "atramentum:dried_light_gray_ink_bricks",
+  "result": {
+    "count": 1,
+    "id": "atramentum:dried_light_gray_ink_tile_wall"
+  }
+}

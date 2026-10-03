@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "dried=false": {
+      "model": "atramentum:block/glow_ink_cauldron"
+    },
+    "dried=true": {
+      "model": "atramentum:block/glow_ink_cauldron_dried"
+    }
+  }
+}

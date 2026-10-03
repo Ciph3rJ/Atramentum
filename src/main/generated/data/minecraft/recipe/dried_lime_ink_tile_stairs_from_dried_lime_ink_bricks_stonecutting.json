@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "atramentum:dried_lime_ink_bricks",
+  "result": {
+    "count": 1,
+    "id": "atramentum:dried_lime_ink_tile_stairs"
+  }
+}

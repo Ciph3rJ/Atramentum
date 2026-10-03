@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink_ink_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": "atramentum:ink_bucket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "atramentum:pink_ink_bucket"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pink_ink_bucket"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "atramentum:pink_ink_bucket"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "atramentum:dried_pink_ink",
+  "result": {
+    "count": 1,
+    "id": "atramentum:dried_pink_ink_stairs"
+  }
+}

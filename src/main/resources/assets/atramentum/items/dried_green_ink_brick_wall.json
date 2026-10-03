@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "atramentum:block/dried_dyed_ink_brick_wall_inventory",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": 6192150
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "atramentum:block/dried_glow_ink_tile_slab"
+    },
+    "type=top": {
+      "model": "atramentum:block/dried_glow_ink_tile_slab_top"
+    },
+    "type=double": {
+      "model": "atramentum:block/dried_glow_ink_tiles"
+    }
+  }
+}
