@@ -1,4 +1,4 @@
-package io.github.ciph3rj.atramentum.util;
+package io.github.ciph3rj.atramentum.util.cauldron;
 
 import io.github.ciph3rj.atramentum.content.AtramentumBlocks;
 import io.github.ciph3rj.atramentum.content.AtramentumItems;

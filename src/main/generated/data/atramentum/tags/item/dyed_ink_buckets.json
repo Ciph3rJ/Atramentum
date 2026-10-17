@@ -1,0 +1,20 @@
+{
+  "values": [
+    "atramentum:ink_bucket",
+    "atramentum:white_ink_bucket",
+    "atramentum:light_gray_ink_bucket",
+    "atramentum:gray_ink_bucket",
+    "atramentum:brown_ink_bucket",
+    "atramentum:red_ink_bucket",
+    "atramentum:orange_ink_bucket",
+    "atramentum:yellow_ink_bucket",
+    "atramentum:lime_ink_bucket",
+    "atramentum:green_ink_bucket",
+    "atramentum:cyan_ink_bucket",
+    "atramentum:light_blue_ink_bucket",
+    "atramentum:blue_ink_bucket",
+    "atramentum:purple_ink_bucket",
+    "atramentum:magenta_ink_bucket",
+    "atramentum:pink_ink_bucket"
+  ]
+}

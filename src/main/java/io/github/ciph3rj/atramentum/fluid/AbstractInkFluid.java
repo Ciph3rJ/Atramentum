@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.level.BlockGetter;
@@ -47,7 +48,7 @@ public abstract class AbstractInkFluid extends FlowingFluid implements Ink {
     }
 
     public boolean canBeReplacedWith(FluidState fluidState, BlockGetter blockGetter, BlockPos blockPos, Fluid fluid, Direction direction) {
-        return direction == Direction.DOWN && !fluid.is(AtramentumTags.FluidTags.INK);
+        return fluidState.getHeight(blockGetter, blockPos) >= 0.44444445F && fluid.is(FluidTags.WATER);
     }
 
     protected float getExplosionResistance() {

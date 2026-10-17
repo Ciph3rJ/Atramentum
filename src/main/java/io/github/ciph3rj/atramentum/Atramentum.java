@@ -2,12 +2,12 @@ package io.github.ciph3rj.atramentum;
 
 import io.github.ciph3rj.atramentum.client.InkFogEnvironment;
 import io.github.ciph3rj.atramentum.content.*;
-import io.github.ciph3rj.atramentum.util.AtramentumCauldronInteraction;
 import io.github.ciph3rj.atramentum.util.AtramentumTags;
+import io.github.ciph3rj.atramentum.util.cauldron.AtramentumCauldronInteraction;
+import io.github.ciph3rj.atramentum.util.cauldron.ColorDyingUtil;
 import io.github.ciph3rj.atramentum.util.inkplayereffects.InkPlayerEffectRegistry;
 import io.github.ciph3rj.cipherlib.Cipher;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.SharedConstants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.fog.FogRenderer;
 import net.minecraft.client.renderer.fog.environment.AtmosphericFogEnvironment;
@@ -48,13 +48,16 @@ public class Atramentum implements ModInitializer {
 
 	public static final BooleanProperty DRIED = BooleanProperty.create("dried");
 
+	// 1.1 Plans
 	// TODO: Fix ink effect not saving and/or loading after leaving world
+	// TODO: Add Ink Bottles
+	// TODO: Ink Colored Hierarchy
+	// TODO: Advancements
+	// TODO: Mortar Compatibility
 
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Initializing Atramentum");
-
-		SharedConstants.IS_RUNNING_IN_IDE = true;
 
 		Cipher.addModId(MOD_ID);
 
@@ -70,11 +73,11 @@ public class Atramentum implements ModInitializer {
 		AtramentumFluids.init();
 
 		AtramentumItems.init();
-		AtramentumCreativeModeTabs.init();
 
 		AtramentumMobEffects.init();
 
 		InkPlayerEffectRegistry.loadAtramentumInkEffects();
+		ColorDyingUtil.load();
 		AtramentumParticleTypes.init();
 
 		AtramentumTags.BlockTags.init();
@@ -101,13 +104,6 @@ public class Atramentum implements ModInitializer {
 		DispenserBlock.registerBehavior(AtramentumItems.PURPLE_INK_BUCKET, bucketDispenseItemBehavior);
 		DispenserBlock.registerBehavior(AtramentumItems.MAGENTA_INK_BUCKET, bucketDispenseItemBehavior);
 		DispenserBlock.registerBehavior(AtramentumItems.PINK_INK_BUCKET, bucketDispenseItemBehavior);
-
-/*		HudEvents.SCREEN_OVERLAY.register(player -> {
-			if (player instanceof LivingEntityAccessor livingEntityAccessor && livingEntityAccessor.getInkEffect() == AtramentumInkPlayerEffects.GLOW && player.hasEffect(AtramentumMobEffects.INKED)) {
-				return Atramentum.id("textures/misc/glow_ink_submerged_overlay.png");
-			}
-            return null;
-        });*/
 
 		LOGGER.info("Finished Initializing Atramentum");
 	}

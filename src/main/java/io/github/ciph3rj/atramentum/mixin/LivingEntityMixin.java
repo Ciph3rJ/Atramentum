@@ -89,15 +89,14 @@ public abstract class LivingEntityMixin extends Entity implements LivingEntityAc
             int particleAmount = this.random.nextInt(1, 5);
 
             for (int particle = 0; particle < particleAmount; particle++) {
-                this.level().addParticle(this.getInkEffect().particle(), this.getX() + particleOffset, this.getY() + 0.05, this.getZ() + particleOffset, 0, 0, 0);
+                this.level().addParticle(this.getInkEffect().particle(), this.getX() + particleOffset, this.getY() + 0.055, this.getZ() + particleOffset, 0, 0, 0);
             }
             this.level().playSound(this, this.blockPosition(), SoundEvents.HONEY_BLOCK_STEP, SoundSource.BLOCKS, 10, 1);
         }
 
         if (this.hasEffect(AtramentumMobEffects.INKED) && this.isInWaterOrRain()) this.removeEffect(AtramentumMobEffects.INKED);
 
-        if (this.getX() == this.savedPos.x() && this.getY() == this.savedPos.y() && this.getZ() == this.savedPos.z()) isInMotion = false;
-        else isInMotion = true;
+        isInMotion = this.getX() != this.savedPos.x() || this.getY() != this.savedPos.y() || this.getZ() != this.savedPos.z();
 
         this.savedPos = new Vec3(this.getX(), this.getY(), this.getZ());
     }

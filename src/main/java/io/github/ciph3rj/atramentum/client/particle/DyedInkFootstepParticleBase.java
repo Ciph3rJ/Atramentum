@@ -21,6 +21,11 @@ public class DyedInkFootstepParticleBase<T extends ScalableParticleOptionsBase> 
         };
     }
 
+    @Override
+    public void setLifetime(int i) {
+        this.lifetime = 20;
+    }
+
     protected float randomizeColor(float f, float g) {
         return (this.random.nextFloat() * 0.2F + 0.8F) * f * g;
     }

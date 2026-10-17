@@ -339,5 +339,15 @@
   "particle.minecraft.dyed_ink_footsteps": "Ink Footstep",
   "particle.minecraft.glow_ink_footsteps": "Ink Footstep",
 
+  "advancement.atramentum.root.title": "Atramentum",
+  "advancement.atramentum.why_is_my_milk_black.title": "Why Is My Milk Black?",
+  "advancement.atramentum.now_its_glowing.title": "Now It's Glowing",
+  "advancement.atramentum.world_of_ink.title": "World of Ink",
+
+  "advancement.atramentum.root.desc": "Drenched in Ink",
+  "advancement.atramentum.why_is_my_milk_black.desc": "This feels familiar, wait, why did I milk a squid?",
+  "advancement.atramentum.now_its_glowing.desc": "Why are you glowing?",
+  "advancement.atramentum.world_of_ink.desc": "Why did you put yourself through this?",
+
   "creativemodetab.atramentum": "Atramentum"
 }

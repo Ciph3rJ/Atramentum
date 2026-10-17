@@ -1,3 +1,14 @@
 // 1.21.11	-999999999-01-01T00:00:00	Atramentum/Tags for minecraft:item
+62330de5c4789066d127efdf831e13056377315a data/atramentum/tags/item/beds.json
+55222e9f26c4dc8700a6be357d01f4b8f3bd3ae1 data/atramentum/tags/item/candles.json
+ff1cca038898045e6aaff60ad08bf4096ebbe6fa data/atramentum/tags/item/carpets.json
+fdaca0dd474d3b28d466066989bdf9247e078393 data/atramentum/tags/item/concrete.json
+5faeae5cf95d079823f16e1e4a9f634231ce1ef1 data/atramentum/tags/item/concrete_powders.json
 ddcfeb03849cc33c36357875a58eeb08335f7c7f data/atramentum/tags/item/covers_ink_footsteps.json
+00b7c90530af901cd004f6be5c6505cc1556205e data/atramentum/tags/item/dyed_ink_buckets.json
+2dc8f52f89d97e3f9b300b60a45ebaea6fd4a873 data/atramentum/tags/item/glass.json
+abc3e31168c79c0f032c64c0e7ca87e214e9142e data/atramentum/tags/item/glass_panes.json
+e205a270cdfb8d05f7b934ee5cc5f2684d044ce8 data/atramentum/tags/item/harnesses.json
 868bf9709742c5502a981fc3d04c5522f0ef6ac9 data/atramentum/tags/item/ink_buckets.json
+8cb1eb557a4e4c78cf3b59b8c46253ebbcfa6b20 data/atramentum/tags/item/terracotta.json
+2d7068e08e99362203966cd5fd23e7a2912a8601 data/atramentum/tags/item/wool.json

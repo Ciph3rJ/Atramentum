@@ -6,6 +6,7 @@
     "EntityMixin",
     "ExampleMixin",
     "GuiMixin",
+    "LayeredCauldronBlockMixin",
     "LivingEntityMixin",
     "SquidMixin"
   ],

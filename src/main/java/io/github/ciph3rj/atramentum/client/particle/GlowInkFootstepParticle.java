@@ -18,6 +18,11 @@ public class GlowInkFootstepParticle extends SingleQuadParticle {
     }
 
     @Override
+    public void setLifetime(int i) {
+        this.lifetime = 20;
+    }
+
+    @Override
     public FacingCameraMode getFacingCameraMode() {
         return (quaternionf, camera, f) -> {
             quaternionf.rotateX((float) -Math.PI / 2);

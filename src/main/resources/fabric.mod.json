@@ -3,11 +3,11 @@
 	"id": "atramentum",
 	"version": "${version}",
 	"name": "Atramentum",
-	"description": "",
+	"description": "Ink all around!!",
 	"authors": [
 		"Ciph3rJ"
 	],
-	"license": "",
+	"license": "EBMC-1A",
 	"icon": "assets/atramentum/icon.png",
 	"environment": "*",
 	"accessWidener": "atramentum.accesswidener",

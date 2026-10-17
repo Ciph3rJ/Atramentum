@@ -3,9 +3,10 @@ package io.github.ciph3rj.atramentum.block;
 import com.mojang.serialization.MapCodec;
 import io.github.ciph3rj.atramentum.Atramentum;
 import io.github.ciph3rj.atramentum.content.AtramentumMobEffects;
-import io.github.ciph3rj.atramentum.util.AtramentumCauldronInteraction;
 import io.github.ciph3rj.atramentum.util.AtramentumTags;
 import io.github.ciph3rj.atramentum.util.LivingEntityAccessor;
+import io.github.ciph3rj.atramentum.util.cauldron.AtramentumCauldronInteraction;
+import io.github.ciph3rj.atramentum.util.cauldron.ColorDyingUtil;
 import io.github.ciph3rj.atramentum.util.inkplayereffects.InkPlayerEffect;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,6 +31,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -87,6 +89,15 @@ public class InkCauldronBlock extends AbstractCauldronBlock implements CauldronI
     }
 
     @Override
+    protected InteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if (!level.getBlockState(blockPos).getValue(DRIED) && ColorDyingUtil.convert(itemStack, player, this) == InteractionResult.SUCCESS) {
+            ColorDyingUtil.convert(itemStack, player, this);
+            level.setBlockAndUpdate(blockPos, Blocks.CAULDRON.defaultBlockState());
+        }
+        return super.useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult);
+    }
+
+    @Override
     protected boolean hasAnalogOutputSignal(BlockState state) {
         return true;
     }
@@ -114,7 +125,7 @@ public class InkCauldronBlock extends AbstractCauldronBlock implements CauldronI
 
     @Override
     protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos pos, Player player, BlockHitResult blockHitResult) {
-        if (level.getBlockState(pos).getValue(DRIED)) {
+        if (player.getMainHandItem().isEmpty() && level.getBlockState(pos).getValue(DRIED)) {
             if (DRIED_BLOCKS.containsKey(this)) {
                 player.handleExtraItemsCreatedOnUse(new ItemStack(getDriedFromBlock(this)));
                 level.setBlockAndUpdate(pos, Blocks.CAULDRON.defaultBlockState());
@@ -143,6 +154,11 @@ public class InkCauldronBlock extends AbstractCauldronBlock implements CauldronI
     }
 
     @Override
+    protected double getContentHeight(BlockState blockState) {
+        return 15;
+    }
+
+    @Override
     protected void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity, InsideBlockEffectApplier insideBlockEffectApplier, boolean bl) {
         if (entity instanceof LivingEntityAccessor livingEntityAccessor && !blockState.getValue(DRIED)) {
             if (INK_EFFECTS.containsKey(this)) livingEntityAccessor.setInkEffect(getFromBlock(this));
@@ -150,6 +166,11 @@ public class InkCauldronBlock extends AbstractCauldronBlock implements CauldronI
                 livingEntity.addEffect(new MobEffectInstance(AtramentumMobEffects.INKED, 200, 0));
         }
         super.entityInside(blockState, level, blockPos, entity, insideBlockEffectApplier, bl);
+    }
+
+    @Override
+    protected VoxelShape getEntityInsideCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Entity entity) {
+        return Shapes.create(new AABB(0, 0, 0, 1, 0.9, 1));
     }
 
     @Override

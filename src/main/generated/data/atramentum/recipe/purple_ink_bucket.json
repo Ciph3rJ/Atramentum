@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:purple_dye",
-    "atramentum:ink_bucket"
+    "#atramentum:dyed_ink_buckets"
   ],
   "result": {
     "count": 1,

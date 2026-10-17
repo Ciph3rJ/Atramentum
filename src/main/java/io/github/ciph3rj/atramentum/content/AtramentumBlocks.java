@@ -3,7 +3,7 @@ package io.github.ciph3rj.atramentum.content;
 import io.github.ciph3rj.atramentum.Atramentum;
 import io.github.ciph3rj.atramentum.block.DriedInkBlockFamily;
 import io.github.ciph3rj.atramentum.block.InkCauldronBlock;
-import io.github.ciph3rj.atramentum.util.AtramentumCauldronInteraction;
+import io.github.ciph3rj.atramentum.util.cauldron.AtramentumCauldronInteraction;
 import io.github.ciph3rj.cipherlib.helper.RegistryHelper;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.registries.Registries;

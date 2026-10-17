@@ -21,8 +21,20 @@ public class AtramentumTags {
 
     public static class ItemTags {
         public static final TagKey<Item> INK_BUCKETS = RegistryHelper.registerItemTags("ink_buckets");
+        public static final TagKey<Item> DYED_INK_BUCKETS = RegistryHelper.registerItemTags("dyed_ink_buckets");
 
         public static final TagKey<Item> COVERS_INK_FOOTSTEPS = RegistryHelper.registerItemTags("covers_ink_footsteps");
+
+        public static final TagKey<Item> WOOL = RegistryHelper.registerItemTags("wool");
+        public static final TagKey<Item> CARPETS = RegistryHelper.registerItemTags("carpets");
+        public static final TagKey<Item> TERRACOTTA = RegistryHelper.registerItemTags("terracotta");
+        public static final TagKey<Item> CONCRETE = RegistryHelper.registerItemTags("concrete");
+        public static final TagKey<Item> CONCRETE_POWDERS = RegistryHelper.registerItemTags("concrete_powders");
+        public static final TagKey<Item> GLASS = RegistryHelper.registerItemTags("glass");
+        public static final TagKey<Item> GLASS_PANES = RegistryHelper.registerItemTags("glass_panes");
+        public static final TagKey<Item> BEDS = RegistryHelper.registerItemTags("beds");
+        public static final TagKey<Item> CANDLES = RegistryHelper.registerItemTags("candles");
+        public static final TagKey<Item> HARNESSES = RegistryHelper.registerItemTags("harnesses");
 
         public static void init() {}
     }

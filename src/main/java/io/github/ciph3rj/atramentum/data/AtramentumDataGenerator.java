@@ -24,10 +24,6 @@ public class AtramentumDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(AtramentumBlockLootTableProvider::new);
 		pack.addProvider(AtramentumBlockTagProvider::new);
 		pack.addProvider(AtramentumItemTagProvider::new);
-		pack.addProvider(AtramentumFluidTagProvider::new);
-		pack.addProvider(AtramentumEntityTypeTagProvider::new);
-		pack.addProvider(AtramentumParticleResourceProvider::new);
-		pack.addProvider(AtramentumModelProvider::new);
 
 		pack.addProvider(toFactory(AtramentumRecipeGenerator.Provider::new, completableFuture));
 	}
